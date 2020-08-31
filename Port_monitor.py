@@ -57,7 +57,7 @@ def resultdeal():
 #如果扫描结果中有非预期端口，机器人推送消息告警
 def dingwarning():
 	url1 = 'https://oapi.xxxxxxxx.com/robot/send?access_token=xxxxxxxxxxxxx'
-	data = {"msgtype": "text", "text": {"content": "小报告！发现非预期端口对互联网开放，快查看warning.json核实啦@xxxxxxx"}, "at": {"atMobiles": ["xxxxxxxx"]}}
+	data = {"msgtype": "text", "text": {"content": "发现非预期端口对互联网开放，warning.json核实@xxxxxxx"}, "at": {"atMobiles": ["xxxxxxxx"]}}
 	#print("有端口暴露")
 	headers = {"Content-Type":"application/json"}
 	result = requests.post(url=url1,data=json.dumps(data),headers=headers)
